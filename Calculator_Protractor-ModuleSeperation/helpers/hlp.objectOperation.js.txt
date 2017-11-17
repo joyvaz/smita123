@@ -1,0 +1,70 @@
+
+var osCalculator = require('../objectStore/os.calculator.js');
+
+var objectOperation = function(){
+    objosCalculator = new osCalculator();
+    // objhlpObjectOperation = new hlpObjectOperation();
+    //perform action on object
+    this.objAction = function(testObject,action,actionValue,expectedResult){
+        switch(action) {
+            case 'navigate':
+                browser.get(actionValue);
+                browser.waitForAngular();
+                browser.sleep(5000);                               
+                expect(browser.getTitle()).toEqual(expectedResult);
+                return true;
+                break;
+
+            case 'setFieldValue':
+                testObject.sendKeys(actionValue);                
+                expect(testObject.getAttribute('value')).toEqual(actionValue);
+                return true;
+                break;  
+            
+            case 'getFieldValue':
+                return testObject.getAttribute('value');    
+                break;
+
+            case 'getWebElementValue':                
+                // expect(testObject.getText()).toEqual(expectedResult);    
+                return testObject.getText();
+                break;
+
+                case 'VerifyWebElementValue':                
+                expect(testObject.getText()).toEqual(expectedResult);    
+                return true;
+                break; 
+                           
+            case 'Click':
+                testObject.click();
+                return true;
+                
+            // case 'selectDropDownValue':
+            //     testObject[actionValue].click
+            //     return true;
+            //     break;
+            case 'selectDropDownValue':    
+                // this.selectOperator=function(optionToSelect){      
+                    // by.element(by.cssContainingText('option', optionToSelect)).click();
+                    testObject.click();
+                    return true;
+                //   };    
+            case 'isDisplay':
+                return testObject.exist();
+                break;
+        }   
+    }
+
+    // this.testIt = function(tData){
+    //     it(tData.testStepName, function(tData) {
+    //         //expect(browser.getTitle()).toEqual("Testing");
+    //         nStepObject=objosCalculator.getCalculatorObject(tData.objectName);
+    //         //perform action on object as per the input Json
+    //         // objhlpObjectOperation.objAction(nStepObject,tData.operation,tData.Value,tData.expectedResult)
+    //         objAction(nStepObject,tData.operation,tData.Value,tData.expectedResult);
+            
+    //     });   
+        
+    // };
+};
+module.exports = objectOperation;

@@ -1,0 +1,33 @@
+[    
+    {
+     "testStepName":"Enter First Value",   
+     "objectName": "FirstValue",
+     "operation": "setFieldValue",
+     "Value": "5",
+     "expectedResult": ""
+    },
+
+    {
+        "testStepName":"Select Operator",   
+        "objectName": "SubtractionOperator",
+        "operation": "selectDropDownValue",
+        "Value": "",
+        "expectedResult": ""
+       },
+
+    {
+        "testStepName":"Enter Second Value",   
+        "objectName": "SecondValue",
+        "operation": "setFieldValue",
+        "Value": "2",
+        "expectedResult": ""
+    },
+
+    {
+        "testStepName":"Click on Go Button",   
+        "objectName": "GoButton",
+        "operation": "Click",
+        "Value": "",
+        "expectedResult": ""
+    }    
+]

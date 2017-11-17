@@ -1,0 +1,43 @@
+var hlpObjectOperation = require('../helpers/hlp.objectOperation.js');
+var commonUtilities = function(){
+    objhlpObjectOperation = new hlpObjectOperation();    
+    //Add Wait
+    this.BrowserWait=function(waitTimeInseconds){
+        browser.sleep(waitTimeInseconds);
+    };
+    
+    //Get the timestamp
+    this.getTimeStamp=function(strSeperator){
+        var today = new Date();        
+        return (today.getMonth() + 1 + strSeperator + today.getDate() + strSeperator + today.getFullYear() + strSeperator + today.getHours() + 'h-' + today.getMinutes() + 'm');
+    };
+
+    this.executeStep = function(tData){
+        console.log(tData.testStepName)
+        it(tData.testStepName, function() {            
+            nStepObject=objosCalculator.getCalculatorObject(tData.objectName);
+            //perform action on object as per the input Json
+            objhlpObjectOperation.objAction(nStepObject,tData.operation,tData.Value,tData.expectedResult)
+            
+        });   
+        
+    };   
+    
+    this.CompareJson = function(inputJson,ActualJson){
+
+    };
+
+    this.getJsonValueBasedOnId = function(JsonObject,IdForWhichValueToReturn){
+        JsonObject.forEach(function(eachJsonObject){           
+            // objutilities.executeStep(data);
+            // var flag=(eachJsonObject.objectName==IdForWhichValueToReturn)
+            if((eachJsonObject.objectName==IdForWhichValueToReturn)){
+                return eachJsonObject.expectedResult;
+            }
+
+        });
+    };
+   
+};
+
+module.exports=commonUtilities;

@@ -1,0 +1,9 @@
+[    
+    {
+        "testStepName":"Verify Result",   
+        "objectName": "FinalResult",
+        "operation": "VerifyWebElementValue",
+        "Value": "",
+        "expectedResult": "4"
+    }
+]

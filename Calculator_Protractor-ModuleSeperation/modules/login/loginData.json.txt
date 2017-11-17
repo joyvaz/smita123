@@ -1,0 +1,10 @@
+[    
+    {
+        "testStepName":"Navigate to Calculator Home page",   
+        "objectName": "browser",
+        "operation": "navigate",
+        "Value": "http://www.way2automation.com/angularjs-protractor/calc/",
+        "expectedResult": "Protractor practice website - Calculator"
+       }
+    
+]

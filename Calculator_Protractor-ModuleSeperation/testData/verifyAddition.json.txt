@@ -1,0 +1,48 @@
+[    
+    {
+        "testStepName":"Navigate to home page",   
+        "objectName": "browser",
+        "operation": "navigate",
+        "Value": "http://www.way2automation.com/angularjs-protractor/calc/",
+        "expectedResult": "Protractor practice website - Calculator"
+       },
+    
+    {
+     "testStepName":"Enter First Value",   
+     "objectName": "FirstValue",
+     "operation": "setFieldValue",
+     "Value": "5",
+     "expectedResult": ""
+    },
+
+    {
+        "testStepName":"Select Operator",   
+        "objectName": "SubtractionOperator",
+        "operation": "selectDropDownValue",
+        "Value": "",
+        "expectedResult": ""
+       },
+
+    {
+        "testStepName":"Enter Second Value",   
+        "objectName": "SecondValue",
+        "operation": "setFieldValue",
+        "Value": "2",
+        "expectedResult": ""
+    },
+
+    {
+        "testStepName":"Click on Go Button",   
+        "objectName": "GoButton",
+        "operation": "Click",
+        "Value": "",
+        "expectedResult": ""
+    },
+    {
+        "testStepName":"Verify Result",   
+        "objectName": "FinalResult",
+        "operation": "VerifyWebElementValue",
+        "Value": "",
+        "expectedResult": "3"
+    }
+]

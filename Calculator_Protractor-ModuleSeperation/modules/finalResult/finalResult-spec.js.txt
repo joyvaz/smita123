@@ -1,0 +1,13 @@
+//import dependancy JS
+
+var testData = require('../finalResult/finalResultData.json');
+var utilities = require('../../helpers/utilities.js');
+
+describe('Final Result Page Test',function() {
+    objutilities=new utilities();
+
+    testData.forEach(function(data){           
+        objutilities.executeStep(data);
+    });
+    
+  });

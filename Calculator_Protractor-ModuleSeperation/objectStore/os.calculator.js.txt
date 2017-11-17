@@ -1,0 +1,43 @@
+var CalculatorObject=function(){
+    
+    this.getCalculatorObject= function(objectName){
+        
+        switch(objectName){
+            
+            // case 'browser':
+            // return "I have been return";//First Value
+
+            case 'FirstValue':
+            return (element(by.model('first')));//First Value)
+            break;
+
+            case 'AdditionOperator':
+            // return element(by.tagName('option')) 
+            return element(by.cssContainingText('option', '+'));
+            break;
+
+            case 'SubtractionOperator':
+            // return element(by.tagName('option')) 
+            return element(by.cssContainingText('option', '-'));
+            break;
+
+            case 'SecondValue':
+            return element(by.model('second'));//Second Value
+            break;
+
+            case 'GoButton':
+            return element(by.id('gobutton')); //Go Button
+            break;        
+
+            case 'FinalResult':
+            return element(by.binding('latest'));//final result
+            break;
+
+            case 'ResultHistory':
+            return element.all(by.repeater('result in memory'));//repeat in history   
+            break;
+        }
+    }
+};
+
+module.exports = CalculatorObject;

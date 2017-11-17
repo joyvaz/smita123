@@ -1,0 +1,13 @@
+//import dependancy JS
+
+var testData = require('../calculation/calculationData.json');
+var utilities = require('../../helpers/utilities.js');
+
+describe('Calculation page Test',function() {
+    objutilities=new utilities();
+
+    testData.forEach(function(data){           
+        objutilities.executeStep(data);
+    });
+    
+  });
